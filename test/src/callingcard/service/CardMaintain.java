@@ -32,7 +32,7 @@ public class CardMaintain {
             System.out.println("数据保存失败");
             return;
         }
-        String data = name + "-" + job + "-" + phone + "-" + company + "-" + address + "0" + "\n";
+        String data = name + "-" + job + "-" + phone + "-" + company + "-" + address + "-" + "0" + "\n";
 
         boolean save = FileUtils.save(FILE_NAME, data);
         if (save) {

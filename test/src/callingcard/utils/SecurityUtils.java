@@ -86,7 +86,7 @@ public class SecurityUtils {
                     c = ')';
                     break;
             }
-            str[0] = c;
+            str[i] = c;
         }
         data = String.valueOf(str);
         return data;
