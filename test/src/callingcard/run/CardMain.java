@@ -17,6 +17,7 @@ import java.util.Scanner;
  */
 public class CardMain {
     public static void main(String[] args) {
+        MenuUI.loadingMenu();
         while (true) {
             boolean flag1 = true;
             MenuUI.mainMenuUI();

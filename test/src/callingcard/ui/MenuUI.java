@@ -3,6 +3,27 @@ package callingcard.ui;
 import callingcard.utils.CardUtils;
 
 public class MenuUI {
+    public static void loadingMenu() {
+        String[] subtitles = {"This ", "is ", "my ", "first ", "achievement", "!", "!", "!\n"};
+        String[] barrages = {"Now ", "check ", "it ", "and ", "give ", "me ", "some ", "suggestions\n"};
+        for (String subtitle : subtitles) {
+            System.out.print(subtitle);
+            try {
+                Thread.sleep(400);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+        for (String barrage : barrages) {
+            System.out.print(barrage);
+            try {
+                Thread.sleep(350);
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        }
+    }
+
     public static void mainMenuUI() {
         System.out.println("************欢迎使用名片管理系统************");
         System.out.println("------------  1.Register  --------------");
