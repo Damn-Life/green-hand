@@ -161,10 +161,10 @@ public class CardMaintain {
         int choice = MenuUI.chooseM();
         switch (choice) {
             case 1:
-                show();
+                showAll();
                 break;
             case 2:
-                find();
+                findOne();
                 break;
         }
     }
@@ -226,7 +226,7 @@ public class CardMaintain {
         }
     }
 
-    public static void show() {
+    public static void showAll() {
         List<String> list = FileUtils.obtain(FILE_NAME);
         if (list == null) {
             System.out.println("无名片信息");
@@ -238,7 +238,7 @@ public class CardMaintain {
         }
     }
 
-    public static void find() {
+    public static void findOne() {
         List<String> list = FileUtils.obtain(FILE_NAME);
         while (true) {
             String findDate = "";

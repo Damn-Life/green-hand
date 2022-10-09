@@ -41,10 +41,12 @@ public class CardUtils {
             return;
         }
         while (true) {
-            boolean judge = SecurityUtils.judge(password);
+            boolean judge = SecurityUtils.judgePw(password);
             if (judge) {
                 break;
-            } else password = CardUtils.input("密码太简单,请重新输入:");
+            } else {
+                password = CardUtils.input("密码太简单,请重新输入:");
+            }
         }
         for (String str : list) {
             if (str.startsWith(account + "-")) {

@@ -5,9 +5,8 @@ import java.util.List;
 import java.util.Random;
 
 public class SecurityUtils {
-    public static boolean judge(String password) {
+    public static boolean judgePw(String password) {
         //判断密码是否过于简单
-
         double[] arr = new double[password.length()];
         int count1 = 0;
         for (int i = 0; i < password.length(); i++) {
@@ -38,14 +37,15 @@ public class SecurityUtils {
 
     public static void code() {
         Random r = new Random();
-        int random = r.nextInt(10000) + 1000;
-        System.out.println("验证码----->" + random);
-        int code = CardUtils.inputInt("请正确输入验证码:");
+        int random = r.nextInt(10000) + 100;
+        String newString = String.format("%04d", random);
+        System.out.println("验证码----->" + newString);
+        String code = CardUtils.input("请正确输入验证码:");
         while (true) {
-            if (code == random) {
+            if (code.equals(newString)) {
                 break;
             } else {
-                code = CardUtils.inputInt("请重新输入验证码:");
+                code = CardUtils.input("请重新输入验证码:");
             }
         }
     }

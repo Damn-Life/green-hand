@@ -22,8 +22,8 @@ public class CardMain {
             MenuUI.mainMenuUI();
             Scanner sc = new Scanner(System.in);
             while (flag1) {
-                int choice = sc.nextInt();
-                switch (choice) {
+                int choice1 = sc.nextInt();
+                switch (choice1) {
                     case 1:
                         Account.reg();
                         flag1 = false;

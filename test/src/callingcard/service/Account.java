@@ -27,7 +27,7 @@ public class Account {
         while (true) {
             password1 = CardUtils.input("请设置登录密码----->>");
             password2 = CardUtils.input("请再次输入密码----->>");
-            boolean judge = SecurityUtils.judge(password1);
+            boolean judge = SecurityUtils.judgePw(password1);
             if (password1.length() < 6 || judge) {
                 System.out.println("密码太简单,请重新输入");
             } else if (password1.equals(password2)) {

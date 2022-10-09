@@ -11,11 +11,11 @@ public class CardSecurity {
 
     public static void will_encryption() {
         System.out.println("*****************用户加密*****************");
-        find();
+        query();
 
     }
 
-    public static void find() {
+    public static void query() {
         List<String> list = FileUtils.obtain(FILE_NAME);
         while (true) {
             String findData = "";
@@ -51,7 +51,7 @@ public class CardSecurity {
         String[] arr = data.split("-");
         int i = 0;
         if (arr[5].equals("1")) {
-            System.out.println("该名片已加密");
+            System.out.println("该名片已加密\n\n");
             return;
         }
         arr[2] = SecurityUtils.kaisa(arr[2]);
@@ -69,7 +69,7 @@ public class CardSecurity {
         }
         list.remove(i);
         for (String next : list) {
-            FileUtils.save(FILE_NAME, next, false);
+            FileUtils.save(FILE_NAME, next + "\n", false);
         }
         boolean is_saved = FileUtils.save(FILE_NAME, backData);
         if (!is_saved) {
